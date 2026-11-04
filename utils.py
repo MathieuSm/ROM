@@ -3,8 +3,8 @@ import numpy as np
 
 # Check if running in a headless environment
 import os
-# if os.environ.get("DISPLAY") is None:
-    # pv.start_xvfb()
+if os.environ.get("DISPLAY") is None:
+    pv.start_xvfb()
 
 class Visualizer:
 
@@ -12,7 +12,8 @@ class Visualizer:
         """
         Visualizer class to plot the stent and vessel in 3D
         """
-        self.plotter = pv.Plotter(notebook=True)
+        # self.plotter = pv.Plotter(notebook=True)
+        self.plotter = pv.Plotter()
         self.plotter.add_axes()
         self.plotter.view_zx()
 
