@@ -3,8 +3,8 @@ import numpy as np
 
 # Check if running in a headless environment
 import os
-if os.environ.get("DISPLAY") is None:
-    pv.start_xvfb()
+# if os.environ.get("DISPLAY") is None:
+    # pv.start_xvfb()
 
 class Visualizer:
 
